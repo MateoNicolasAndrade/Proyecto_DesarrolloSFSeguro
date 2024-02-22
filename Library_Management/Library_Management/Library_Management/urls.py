@@ -7,6 +7,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('simple/',indexView),
     path('',include("library.urls")),
-    path('api-estud/',include("library.urls")),
+    path('',include("Users_API.urls")),
 ]
 
