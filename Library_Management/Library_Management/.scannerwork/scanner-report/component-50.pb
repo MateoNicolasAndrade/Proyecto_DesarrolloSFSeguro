@@ -1,1 +1,1 @@
-2 2webXhrlogin/templates/index.html
+2 2pyXhrlogin/models.py

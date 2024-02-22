@@ -1,1 +1,1 @@
-6 2pyXhrlogin/__init__.py
+6 2pyXhrlogin/urls.py

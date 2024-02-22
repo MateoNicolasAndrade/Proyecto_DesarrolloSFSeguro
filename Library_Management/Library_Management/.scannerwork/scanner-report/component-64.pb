@@ -1,1 +1,1 @@
-@ 2pyXhr Users_API/migrations/__init__.py
+@ 2pyXhrUsers_API/admin.py

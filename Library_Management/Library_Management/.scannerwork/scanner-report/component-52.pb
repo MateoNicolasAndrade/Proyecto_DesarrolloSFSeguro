@@ -1,1 +1,1 @@
-4 2pyXhrlogin/urls.py
+4 2webXhrlogin/templates/index.html

@@ -1,8 +1,14 @@
-from django.urls import path
-from .views import index_view, api_user_read
-
-
-urlpatterns = [
-    path('simple/',index_view),
-    path('api/user-read/',api_user_read, name='api_user_read')
-]
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Hellow world</h1>
+    
+</body>
+</html>

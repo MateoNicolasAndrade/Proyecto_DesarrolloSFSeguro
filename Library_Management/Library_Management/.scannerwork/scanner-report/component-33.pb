@@ -1,1 +1,1 @@
-! 2pyXhrLibrary_Management/urls.py
+! 2pyX’hrLibrary_Management/settings.py

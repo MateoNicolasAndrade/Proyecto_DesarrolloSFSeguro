@@ -1,1 +1,1 @@
-, 2pyXhrlogin/migrations/__init__.py
+, 2pyXhr login/migrations/0001_initial.py
