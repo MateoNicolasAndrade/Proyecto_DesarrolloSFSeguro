@@ -1,0 +1,1 @@
+ 2pyX.hrIlibrary/migrations/0002_rename_autor_id_detalleprestamo_autor_and_more.py

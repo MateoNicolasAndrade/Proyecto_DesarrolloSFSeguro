@@ -1,0 +1,6 @@
+projectKey=backend_pf
+serverUrl=http://localhost:9000
+serverVersion=10.4.0.87286
+dashboardUrl=http://localhost:9000/dashboard?id=backend_pf
+ceTaskId=56dff68f-3890-43fb-9346-9c36847064b3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=56dff68f-3890-43fb-9346-9c36847064b3
