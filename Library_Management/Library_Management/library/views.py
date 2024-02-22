@@ -32,5 +32,5 @@ class LibroAPIviewSet(viewsets.ModelViewSet):
 
 class DetallePrestamoAPIviewSet(viewsets.ModelViewSet):
         
-        queryset = DetallePrestamo.objects.all()
-        serializer_class = DetallePrestamoSerializer
+    queryset = DetallePrestamo.objects.all()
+    serializer_class = DetallePrestamoSerializer

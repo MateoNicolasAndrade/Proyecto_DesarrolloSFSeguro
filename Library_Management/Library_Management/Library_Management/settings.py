@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'library.apps.LibraryConfig',
 
     ##Extra apps
+    
+    #Apps created by therd parties
     'rest_framework',
 ]
 
@@ -129,8 +131,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 ## Settings for rest_framework
+# Rest framework settings
+
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
