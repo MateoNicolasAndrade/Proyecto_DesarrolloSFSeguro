@@ -1,0 +1,22 @@
+from django.urls import path
+from .views import EstudianteAPIviewSet, PrestamoAPIviewSet, AutorAPIviewSet, LibroAPIviewSet, DetallePrestamoAPIviewSet
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'estudiantes', EstudianteAPIviewSet, basename='estudiantes')
+router.register(r'prestamos', PrestamoAPIviewSet, basename='prestamos')
+router.register(r'autores', AutorAPIviewSet, basename='autores')
+router.register(r'libros', LibroAPIviewSet, basename='libros')
+router.register(r'detalles', DetallePrestamoAPIviewSet, basename='detalles')
+
+
+urlpatterns = [
+
+##path('simple/',indexView, name='indexView'),
+##path('estudiantesAPI/',estudiantesAPI, name='estudiantesAPI'),
+#path('estudiantesList/',EstudianteAPIList.as_view(), name='estudiantes_List'),
+#path('estudiantesCreate/',EstudianteAPICreate.as_view(), name='estudiantes_Create'),
+
+]
+
+urlpatterns += router.urls
