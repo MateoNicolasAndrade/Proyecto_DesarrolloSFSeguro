@@ -8,3 +8,4 @@ def get_key():
             os.environ[key] = value
             key1 = str(value)
     return key1
+    
