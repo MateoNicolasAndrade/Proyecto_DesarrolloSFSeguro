@@ -1,9 +1,9 @@
 from django.contrib import admin
-from django.urls import path
-from login.views import indexView
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('simple/',indexView),
+    path('',include('login.urls')),
+    path('',include('Users_API.urls')),
 ]
 
