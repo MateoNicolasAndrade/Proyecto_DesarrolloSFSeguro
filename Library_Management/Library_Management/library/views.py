@@ -3,7 +3,7 @@ from django.core.serializers import serialize
 from django.http import HttpResponse
 from rest_framework import generics
 from .models import Estudiante, Prestamo, Autor, Libro, DetallePrestamo
-from .serializer import EstudianteSerializer, PrestamoSerializer, AutorSerializer, LibroSerializer, DetallePrestamoSerializer
+from .serializer import EstudianteSerializer, PrestamoSerializer, AutorSerializer, LibroSerializer, DetallePrestamoSerializer, LibroSerializerExtend, DetallePrestamoSerializerExtend
 from rest_framework import viewsets
 
 # Create your views here.
@@ -33,8 +33,18 @@ class LibroAPIviewSet(viewsets.ModelViewSet):
     queryset = Libro.objects.all()
     serializer_class = LibroSerializer
 
+class LibroExtendAPIviewSet(viewsets.ModelViewSet):
+    
+    queryset = Libro.objects.all()
+    serializer_class = LibroSerializerExtend
+
 
 class DetallePrestamoAPIviewSet(viewsets.ModelViewSet):
         
     queryset = DetallePrestamo.objects.all()
     serializer_class = DetallePrestamoSerializer
+
+class DetallePrestamoExtendAPIviewSet(viewsets.ModelViewSet):
+        
+    queryset = DetallePrestamo.objects.all()
+    serializer_class = DetallePrestamoSerializerExtend

@@ -23,6 +23,13 @@ class AutorSerializer(serializers.ModelSerializer):
 
 class LibroSerializer(serializers.ModelSerializer):
     '''Serializador para el modelo de libros'''
+    
+    class Meta:
+        model = Libro
+        fields = '__all__'
+
+class LibroSerializerExtend(serializers.ModelSerializer):
+    '''Serializador para el modelo de libros'''
     autor_id = AutorSerializer()
     
     class Meta:
@@ -30,6 +37,13 @@ class LibroSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class DetallePrestamoSerializer(serializers.ModelSerializer):
+    '''Serializador para el modelo de detalles de prestamos'''
+
+    class Meta:
+        model = DetallePrestamo
+        fields = '__all__'
+
+class DetallePrestamoSerializerExtend(serializers.ModelSerializer):
     '''Serializador para el modelo de detalles de prestamos'''
 
     autor = AutorSerializer()
