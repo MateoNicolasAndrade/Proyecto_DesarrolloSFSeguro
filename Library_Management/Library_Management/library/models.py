@@ -32,6 +32,8 @@ class Prestamo(models.Model):
 class Autor(models.Model):
     '''Modelo de registro de autores de libros'''
     autor_nombre = models.CharField(max_length=35, verbose_name='Autor_nombre')
+    autor_fechaNac = models.DateField(verbose_name='Fecha_Nacimiento', null=False, blank=False)
+    autor_nacionalidad = models.CharField(max_length=35, verbose_name='Nacionalidad')
     
     class Meta:
         db_table = 'AUTOR'
@@ -39,12 +41,15 @@ class Autor(models.Model):
         verbose_name_plural = 'AUTORES'
         
     def __str__(self) -> str:
-        return self.autor_nombre
+        return self.autor_nombre + ' ' + self.autor_nacionalidad + ' ' + self.autor_fechaNac
 
 class Libro(models.Model):
     '''Modelo de registro de libros'''
     autor_id = models.ForeignKey(Autor, on_delete=models.CASCADE, verbose_name='Autor')
     libro_nombre = models.CharField(max_length=35, verbose_name='Libro_nombre')
+    libro_fechaPub = models.DateField(verbose_name='Fecha_Publicacion', null=False, blank=False)
+    libro_descripcion = models.TextField(verbose_name='Descripcion')
+    libro_stock = models.IntegerField(verbose_name='Stock', null=False, blank=False)
     
     
     class Meta:
@@ -53,7 +58,7 @@ class Libro(models.Model):
         verbose_name_plural = 'LIBROS'
         
     def __str__(self) -> str:
-        return self.libro_nombre + ' ' + self.autor_id
+        return self.libro_nombre + ' ' + self.autor_id + ' ' + self.libro_fechaPub + ' ' + self.libro_descripcion
 
 class DetallePrestamo(models.Model):
     '''Modelo de registro de detalles de prestamos de libros'''

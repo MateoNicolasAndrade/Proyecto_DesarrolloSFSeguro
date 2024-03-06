@@ -15,20 +15,24 @@ class EstudianteAPIviewSet(viewsets.ModelViewSet):
     queryset = Estudiante.objects.all()
     serializer_class = EstudianteSerializer
 
+
 class PrestamoAPIviewSet(viewsets.ModelViewSet):
     
     queryset = Prestamo.objects.all()
     serializer_class = PrestamoSerializer
+
 
 class AutorAPIviewSet(viewsets.ModelViewSet):
     
     queryset = Autor.objects.all()
     serializer_class = AutorSerializer
 
+
 class LibroAPIviewSet(viewsets.ModelViewSet):
     
     queryset = Libro.objects.all()
     serializer_class = LibroSerializer
+
 
 class DetallePrestamoAPIviewSet(viewsets.ModelViewSet):
         
