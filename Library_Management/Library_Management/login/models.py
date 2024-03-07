@@ -28,3 +28,6 @@ class UserDb(models.Model):
             if not check_password(self.password, orig.password):
                 self.password = make_password(self.password)
         super().save(*args, **kwargs)
+        
+    def check_password(self, password):
+        return check_password(password, self.password)
